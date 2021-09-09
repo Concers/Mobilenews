@@ -17,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         SplashActivityStart(3000)
-// Splasha Geri dönüyor
+        // Splasha Geri dönüyor finish yaparak bitti
 
     }
 

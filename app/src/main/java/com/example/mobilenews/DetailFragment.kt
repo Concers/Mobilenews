@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.mobilenews.databinding.FragmentDetailBinding
-
-
+import com.example.mobilenews.mock.News
 
 
 class DetailFragment : Fragment() {
@@ -18,9 +17,10 @@ class DetailFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val test = "Test"
 
     }
 
@@ -34,6 +34,27 @@ class DetailFragment : Fragment() {
         )
         // Inflate the layout for this fragment
         return binding.root
+
+
+
+
+    }
+
+
+    companion object {
+        fun newInstance(param1: String, param2: String) =
+            NewsFragment().apply {
+                arguments = Bundle().apply {
+                    putString("Headline", param1)
+                    putString("description", param2)
+                }
+            }
+    }
+
+
+    fun loadFragment() {
+        val news = News("sadasd", "sadsada", 1)
+
     }
 
 
