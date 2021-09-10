@@ -1,13 +1,13 @@
 package com.example.mobilenews
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.mobilenews.databinding.FragmentNewsBinding
+import com.example.mobilenews.util.getDetailheaderTitle
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,19 +23,6 @@ class NewsFragment : Fragment() {
 
     private lateinit var binding: FragmentNewsBinding
 
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,29 +31,10 @@ class NewsFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_news, container, false
         )
-
-        binding.header = "Haber 1 "
-
-
-
-        fun replace(view: View) {
-            val detailFragment = DetailFragment()
-            val newsFragment = NewsFragment()
-
-            val trans = fragmentManager?.beginTransaction()
-            trans?.remove(newsFragment)
-            trans?.replace(binding.frmContainerDetail.id, detailFragment)
-                ?.addToBackStack(null)
-            trans?.commit()
-        }
-
-        binding.frmContainerDetail.setOnClickListener {
-            replace(view = it)
-            Log.e("frmContainer ", "Tıklandı")
-
-        }
-
-
+        // Set TExt
+        binding.header = getDetailheaderTitle()
+        binding.imageUrl =
+            "https://blog.jetbrains.com/wp-content/uploads/2021/07/1.5.30-M1_banners-01.png"
 
         return binding.root
 
@@ -74,16 +42,19 @@ class NewsFragment : Fragment() {
     }
 
 
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            NewsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
+
+//fun replace(view: View) {
+//    val detailFragment = DetailFragment()
+//
+//    val trans = Activity?.supportFragmentManager?.beginTransaction()
+//    trans?.replace(binding.frmContainerDetail.id, detailFragment)
+//    trans?.commit()
+//    Log.e("Eklendi","eklendi")
+//}
+
+//binding.frmContainerDetail1.setOnClickListener {
+//    Log.e("Geldi","Geldi")
+//    //
+//    //            replace(it)
+//}

@@ -3,31 +3,85 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="header"
+            type="String" />
+
+        <variable
+            name="date"
+            type="String" />
+
+        <variable
+            name="context"
+            type="String" />
+
+        <variable
+            name="image"
+            type="int" />
+
+
+        <import type="com.example.mobilenews.R" />
+
+        <variable
+            name="headerImage2"
+            type="int" />
+
+        <variable
+            name="imageUrl"
             type="String" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_launcher_background">
+            android:orientation="horizontal">
 
-        </ImageView>
+            <ImageView
+                profileImage="@{imageUrl}"
+                android:layout_width="250dp"
+                android:layout_height="150dp">
 
-        <TextView
-            android:layout_width="108dp"
-            android:layout_height="wrap_content"
-            android:text="@{header}" />
+            </ImageView>
 
-        <TextView
+            <TextView
+                android:layout_width="108dp"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{header}"
+                android:textSize="24dp" />
+
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:text="@{date}" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dessdsadal " />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{context}">
+
+            </TextView>
+        </LinearLayout>
+
+
     </LinearLayout>
+
+
 </layout>

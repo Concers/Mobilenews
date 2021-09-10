@@ -1,41 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
         <import type="android.view.View" />
 
-        <variable
-            name="textView"
-            type="String" />
 
     </data>
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:context=".MainActivity">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.fragment.app.FragmentContainerView
+            <FrameLayout
+                android:id="@+id/frmContainerNews1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                android:id="@+id/frmContainerNews"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                                android:clickable="true"
-                android:focusable="true">
-
-            </androidx.fragment.app.FragmentContainerView>
+            </FrameLayout>
 
 
+            <FrameLayout
+                android:id="@+id/frmContainerNews2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerNews10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frmContainerDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
 
         </LinearLayout>
+
+
     </androidx.core.widget.NestedScrollView>
 </layout>
