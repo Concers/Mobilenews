@@ -16,17 +16,17 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        SplashActivityStart(3000)
+        splashActivityStart(3000)
 
     }
 
-    private fun SplashActivityStart(milis: Long) {
+    private fun splashActivityStart(milis: Long) {
         object : Thread() {
             override fun run() {
                 try {
                     sleep(milis)
-                    val Intent = Intent(baseContext, MainActivity::class.java)
-                    startActivity(Intent)
+                    val intent = Intent(baseContext, MainActivity::class.java)
+                    startActivity(intent)
                     finish()
                 } catch (e: Exception) {
                     e.printStackTrace()
