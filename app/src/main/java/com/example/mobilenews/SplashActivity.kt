@@ -17,22 +17,20 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         SplashActivityStart(3000)
-        // Splasha Geri dönüyor finish yaparak bitti
 
     }
 
     private fun SplashActivityStart(milis: Long) {
-        val delay = object : Thread() {
+        object : Thread() {
             override fun run() {
                 try {
-                    Thread.sleep(milis)
+                    sleep(milis)
                     val Intent = Intent(baseContext, MainActivity::class.java)
                     startActivity(Intent)
                     finish()
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-
             }
         }.start()
     }
