@@ -18,12 +18,6 @@ class DetailFragment : Fragment() {
     private var param2: String? = null
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val test = "Test"
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,10 +26,13 @@ class DetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_detail, container, false
         )
+
+        val test = "test"
+        binding.header = test
+
+
         // Inflate the layout for this fragment
         return binding.root
-
-
 
 
     }
@@ -52,10 +49,6 @@ class DetailFragment : Fragment() {
     }
 
 
-    fun loadFragment() {
-        val news = News("sadasd", "sadsada", 1)
-
-    }
 
 
 }

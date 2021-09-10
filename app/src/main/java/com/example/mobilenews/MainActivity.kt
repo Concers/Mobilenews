@@ -1,11 +1,10 @@
 package com.example.mobilenews
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.replace
 import com.example.mobilenews.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,12 +17,12 @@ class MainActivity : AppCompatActivity() {
             this, R.layout.activity_main
         )
 
-
+        val detailFragment = DetailFragment()
         val fragmentTransaction = supportFragmentManager.beginTransaction()
+            .replace(binding.frmContainerdetail.id, detailFragment)
         fragmentTransaction.commit()
 
 
-        val detailFragment = DetailFragment()
         val newsFragment1 = NewsFragment()
         val newsFragment2 = NewsFragment()
         val newsFragment3 = NewsFragment()
@@ -33,31 +32,62 @@ class MainActivity : AppCompatActivity() {
         val newsFragment7 = NewsFragment()
         val newsFragment8 = NewsFragment()
 
+        fragmentTransaction.replace(binding.frmContainerNews1.id, newsFragment1)
+        fragmentTransaction
+            .add(binding.frmContainerNews2.id, newsFragment2)
+
+
+
+
+
 
         with(fragmentTransaction) {
-            add(binding.frmContainerNews1.id, detailFragment)
-            add(binding.frmContainerNews2.id, newsFragment1)
-            add(binding.frmContainerNews3.id, newsFragment2)
-            add(binding.frmContainerNews4.id, newsFragment3)
-            add(binding.frmContainerNews5.id, newsFragment4)
-            add(binding.frmContainerNews6.id, newsFragment5)
-            add(binding.frmContainerNews7.id, newsFragment6)
-            add(binding.frmContainerNews8.id, newsFragment7)
-            add(binding.frmContainerNews9.id, newsFragment8)
+
+
+            replace(binding.frmContainerNews4.id, newsFragment3)
+
+            replace(binding.frmContainerNews5.id, newsFragment4)
+
+            replace(binding.frmContainerNews6.id, newsFragment5)
+
+            replace(binding.frmContainerNews7.id, newsFragment6)
+
+            replace(binding.frmContainerNews8.id, newsFragment7)
+
+            replace(binding.frmContainerNews9.id, newsFragment8)
 
 
         }
 
+        binding.frmContainerNews1.setOnClickListener {
+//            binding.frmContainerNews1.removeAllViews()
+//            binding.frmContainerNews2.removeAllViews()
+//            binding.frmContainerNews3.removeAllViews()
+//            binding.frmContainerNews4.removeAllViews()
+//            binding.frmContainerNews5.removeAllViews()
+//            binding.frmContainerNews6.removeAllViews()
+//            binding.frmContainerNews7.removeAllViews()
+//            binding.frmContainerNews8.removeAllViews()
+//            binding.frmContainerNews9.removeAllViews()
+
+            val detailFragment = DetailFragment()
+            fragmentTransaction.add(binding.frmContainerdetail.id, detailFragment)
+                .addToBackStack(null)
+            fragmentTransaction.replace<NewsFragment>(R.id.frmContainerdetail)
 
 
+            Log.e("frmContainer ", "Tıklandı")
 
+        }
+
+
+    }
 
 
 }
-}
 
 
-        // ekle addtoBackStack
+// ekle addtoBackStack
 
 
 

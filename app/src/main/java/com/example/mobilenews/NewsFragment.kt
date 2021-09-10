@@ -1,10 +1,13 @@
 package com.example.mobilenews
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import com.example.mobilenews.databinding.FragmentNewsBinding
+import com.example.mobilenews.mock.News
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +20,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class NewsFragment : Fragment() {
+
+    private lateinit var binding: FragmentNewsBinding
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,7 +41,17 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_news, container, false)
+        binding = DataBindingUtil.inflate(
+            inflater, R.layout.fragment_news, container, false
+        )
+
+
+        binding.header = "Haber 1 "
+
+
+        return binding.root
+
+
     }
 
     companion object {

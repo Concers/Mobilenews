@@ -4,9 +4,15 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
-            name="News"
-            type="com.example.mobilenews.mock.News" />
+            name="header"
+            type="String" />
+
+        <variable
+            name="description"
+            type="String" />
 
         <variable
             name="time"
@@ -26,21 +32,21 @@
             android:orientation="horizontal">
 
             <ImageView
+
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@{News.image}">
+                android:layout_height="wrap_content">
 
             </ImageView>
 
             <TextView
                 android:layout_width="108dp"
                 android:layout_height="wrap_content"
-                android:text="@{News.newHeadline}" />
+                android:text="@{header}" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{News.description}" />
+                android:text="@{description}" />
         </LinearLayout>
     </FrameLayout>
 </layout>
