@@ -1,13 +1,13 @@
 package com.example.mobilenews
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.mobilenews.databinding.FragmentNewsBinding
-import com.example.mobilenews.mock.News
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,8 +45,27 @@ class NewsFragment : Fragment() {
             inflater, R.layout.fragment_news, container, false
         )
 
-
         binding.header = "Haber 1 "
+
+
+
+        fun replace(view: View) {
+            val detailFragment = DetailFragment()
+            val newsFragment = NewsFragment()
+
+            val trans = fragmentManager?.beginTransaction()
+            trans?.remove(newsFragment)
+            trans?.replace(binding.frmContainerDetail.id, detailFragment)
+                ?.addToBackStack(null)
+            trans?.commit()
+        }
+
+        binding.frmContainerDetail.setOnClickListener {
+            replace(view = it)
+            Log.e("frmContainer ", "Tıklandı")
+
+        }
+
 
 
         return binding.root
@@ -54,16 +73,10 @@ class NewsFragment : Fragment() {
 
     }
 
+
+
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment NewsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             NewsFragment().apply {

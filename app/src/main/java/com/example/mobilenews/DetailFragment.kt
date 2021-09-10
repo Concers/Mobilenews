@@ -30,9 +30,10 @@ class DetailFragment : Fragment() {
         val test = "test"
         binding.header = test
 
-
         // Inflate the layout for this fragment
         return binding.root
+
+
 
 
     }

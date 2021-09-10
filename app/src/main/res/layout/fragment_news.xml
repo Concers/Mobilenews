@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -15,26 +14,33 @@
             type="String" />
 
         <variable
+            name="ImageView"
+            type="int" />
+
+        <variable
             name="time"
             type="String" />
 
     </data>
 
-    <FrameLayout
-        android:id="@+id/fragmentNews"
+    <LinearLayout
+        android:id="@+id/frmContainerDetail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".NewsFragment">
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <ImageView
-
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
 
             </ImageView>
 
@@ -46,7 +52,266 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{description}" />
+                android:text="Descriptn Detail " />
         </LinearLayout>
-    </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:text="@{header}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descriptn Detail " />
+        </LinearLayout>
+    </LinearLayout>
 </layout>

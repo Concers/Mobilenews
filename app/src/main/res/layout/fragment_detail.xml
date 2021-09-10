@@ -2,15 +2,7 @@
 
     <data>
 
-        <import type="com.example.mobilenews.util.BindingAdapter" />
-
         <import type="android.view.View" />
-
-
-        <variable
-            name="news"
-            type="com.example.mobilenews.mock.News" />
-
         <variable
             name="header"
             type="String" />
@@ -27,7 +19,7 @@
             android:background="@drawable/ic_launcher_background">
 
         </ImageView>
-        <!--            numberOfSets = "@={header}"-->
+
         <TextView
             android:layout_width="108dp"
             android:layout_height="wrap_content"
@@ -36,6 +28,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descriptn Detail " />
+            android:text="Dessdsadal " />
     </LinearLayout>
 </layout>

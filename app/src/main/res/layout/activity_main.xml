@@ -23,111 +23,17 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@{textView}">
-
-            </TextView>
-
             <androidx.fragment.app.FragmentContainerView
 
-                android:id="@+id/frmContainerNews1"
+                android:id="@+id/frmContainerNews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
-
-                android:clickable="true"
+                                android:clickable="true"
                 android:focusable="true">
 
             </androidx.fragment.app.FragmentContainerView>
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerNews11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
-
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/frmContainerdetail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.fragment.app.FragmentContainerView>
 
 
         </LinearLayout>
