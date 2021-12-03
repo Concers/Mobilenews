@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
             this, R.layout.activity_main
         )
 
-
         val newsFragment = NewsFragment()
         val newsFragment2 = NewsFragment()
         val newsFragment3 = NewsFragment()
@@ -28,27 +27,28 @@ class MainActivity : AppCompatActivity() {
         val newsFragment9 = NewsFragment()
         val newsFragment10 = NewsFragment()
 
-
-
-
-
-
         val fragmentTransaction = supportFragmentManager.beginTransaction()
             .add(binding.frmContainerNews1.id, newsFragment)
+            .addToBackStack(null)
             .add(binding.frmContainerNews2.id, newsFragment2)
+            .addToBackStack(null)
             .add(binding.frmContainerNews3.id, newsFragment3)
+            .addToBackStack(null)
             .add(binding.frmContainerNews4.id, newsFragment4)
+            .addToBackStack(null)
             .add(binding.frmContainerNews5.id, newsFragment5)
+            .addToBackStack(null)
             .add(binding.frmContainerNews6.id, newsFragment6)
+            .addToBackStack(null)
             .add(binding.frmContainerNews7.id, newsFragment7)
+            .addToBackStack(null)
             .add(binding.frmContainerNews8.id, newsFragment8)
+            .addToBackStack(null)
             .add(binding.frmContainerNews9.id, newsFragment9)
+            .addToBackStack(null)
             .add(binding.frmContainerNews10.id, newsFragment10)
             .addToBackStack(null)
             .commit()
-
-
-
 
         binding.frmContainerNews1.setOnClickListener {
             val detailFragment = DetailFragment()
@@ -68,8 +68,6 @@ class MainActivity : AppCompatActivity() {
                 .commit()
             Log.e("Tıklandı", "tıklandı1")
         }
-
-
         binding.frmContainerNews2.setOnClickListener {
             val detailFragment = DetailFragment()
             supportFragmentManager.beginTransaction()
@@ -237,8 +235,6 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-
-// ekle addtoBackStack
 
 
 
