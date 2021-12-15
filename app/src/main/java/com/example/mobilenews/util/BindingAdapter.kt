@@ -6,7 +6,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 object BindingAdapter {
-
     @JvmStatic
     @BindingAdapter("profileImage")
     fun loadImage(view: ImageView, imageUrl: String?) {
